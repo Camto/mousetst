@@ -1,0 +1,288 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Floor_Detector.gd" type="Script" id=1]
+[ext_resource path="res://RigidBody2D.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Pauser.gd" type="Script" id=4]
+[ext_resource path="res://Death_Zone.gd" type="Script" id=5]
+[ext_resource path="res://Pause Menu.gd" type="Script" id=6]
+[ext_resource path="res://Slider.gd" type="Script" id=7]
+[ext_resource path="res://Slider2.gd" type="Script" id=8]
+[ext_resource path="res://Slider3.gd" type="Script" id=9]
+[ext_resource path="res://Resume_Button.gd" type="Script" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 17.3939
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7164.73, 528.292 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 272.835
+margin_top = 170.002
+margin_right = 588.835
+margin_bottom = 217.002
+text = "Use the mouse to move.
+Press esc to free your mouse and pause.
+Click the window to resume."
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 477.562, 283.657 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -426.562, -79.7702, -335.704, 35.4653, -214.928, 126.324, -12.158, 144.053, 129.67, 85.3268, 201.693, -9.96411, 229.393, -91.9586, 310.28, -94.1747, 407.787, -77.5541, 294.767, 134.08, 5.57059, 243.776, -309.111, 193.914, -473.1, -85.3104, -469.776, -264.812, -375.593, -334.618, -332.38, -298.053, -437.643, -236.003, -452.047, -169.521 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -331.272, -299.161, -438.751, -236.003, -452.047, -166.197, -426.562, -77.5541, -337.92, 34.3572, -218.252, 125.216, -13.266, 145.161, 128.562, 85.3268, 198.368, -5.53198, 230.501, -91.9586, 311.388, -95.2827, 407.787, -78.6622, 294.767, 136.296, 7.78665, 243.776, -308.003, 196.13, -471.992, -84.2023, -471.992, -265.92, -375.593, -334.618 )
+
+[node name="Floor_Detector" type="Area2D" parent="StaticBody2D"]
+position = Vector2( -2.20532, -19.1124 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Floor_Detector"]
+position = Vector2( -477.562, -283.657 )
+polygon = PoolVector2Array( 54.6846, 127.8, 78.9426, 206.455, 167.154, 310.103, 275.212, 393.169, 464.866, 414.486, 598.939, 366.85, 665.839, 292.425, 709.741, 210.891, 716.849, 180.727, 792.717, 180.727, 887.544, 200.575, 886.809, 224.098, 452.369, 515.194, 146.04, 383.166, 14.2995, 197.528, 5.48512, 17.368, 5.48512, 11.3806, 103.201, -60.3831, 167.889, -15.5424, 148.041, 2.83485, 28.704, 43.5113, 23.8107, 134.416 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1131.31, 182.567 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( 80.7018, -11.2048, -37.5618, -11.2048, -26.17, 23.5697, 16.2489, 40.3574, 74.7061, 25.2185 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2"]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -26.218, 23.4696, 16.0085, 40.4864, 74.6218, 25.3604, 80.9243, -11.1941, -37.563, -11.194 )
+
+[node name="Floor_Detector" type="Area2D" parent="StaticBody2D2"]
+position = Vector2( -2.20532, -19.1124 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2/Floor_Detector"]
+position = Vector2( -477.562, -283.657 )
+polygon = PoolVector2Array( 442.29, 291.234, 560.2, 291.234, 560.288, 263.889, 442.2, 263.854 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 1455.32, 92.3766 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PoolVector2Array( 80.7018, -11.2048, -37.5618, -11.2048, -26.17, 23.5697, 16.2489, 40.3574, 74.7061, 25.2185 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D3"]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -26.218, 23.4696, 16.0085, 40.4864, 74.6218, 25.3604, 80.9243, -11.1941, -37.563, -11.194 )
+
+[node name="Floor_Detector" type="Area2D" parent="StaticBody2D3"]
+position = Vector2( -2.20532, -19.1124 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3/Floor_Detector"]
+position = Vector2( -477.562, -283.657 )
+polygon = PoolVector2Array( 442.29, 291.234, 560.2, 291.234, 560.288, 263.889, 442.2, 263.854 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 2037.28, 117.626 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PoolVector2Array( -149.584, -105.376, -122.584, -77.3757, -88.5836, -52.3756, -51.5835, -32.3755, -11.5833, -22.3755, 30.417, -16.3755, 66.417, -16.3755, 58.417, 13.6246, 10.4167, 14.6246, -27.5835, 6.62462, -71.5835, -7.37544, -111.584, -28.3755, -151.584, -59.3757, -193.584, -105.376 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D4"]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -193.633, -105.484, -149.65, -105.484, -123.334, -77.8804, -88.3694, -52.3007, -51.5645, -32.4258, -11.6306, -22.4884, 30.5115, -16.4155, 66.5806, -16.4155, 58.6675, 13.5809, 10.2686, 14.685, -27.6411, 6.77187, -71.6234, -7.21416, -111.557, -28.1932, -152.227, -59.8458 )
+
+[node name="Floor_Detector" type="Area2D" parent="StaticBody2D4"]
+position = Vector2( -2.20532, -19.1124 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4/Floor_Detector"]
+position = Vector2( -477.562, -283.657 )
+polygon = PoolVector2Array( 286.118, 197.218, 286.856, 170.826, 331.006, 171.204, 330.252, 197.241, 368.729, 219.288, 408.257, 237.998, 440.143, 250.384, 472.137, 259.882, 511.005, 263.656, 546.476, 263.656, 546.854, 285.92, 426.855, 294.976 )
+
+[node name="Player" type="RigidBody2D" parent="." groups=[
+"Player",
+]]
+position = Vector2( 88.3266, 74.2618 )
+gravity_scale = 20.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 0.00107086, -0.012159 )
+scale = Vector2( 0.458073, 0.469708 )
+texture = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="Pauser" type="Node2D" parent="." groups=[
+"Pauser",
+]]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="Death_Zone" type="Area2D" parent="."]
+position = Vector2( 774.779, 1243.37 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death_Zone"]
+shape = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_Menu" type="Node2D" parent="CanvasLayer" groups=[
+"Pause_Menu",
+]]
+pause_mode = 2
+visible = false
+script = ExtResource( 6 )
+
+[node name="Pause_BG" type="Polygon2D" parent="CanvasLayer/Pause_Menu"]
+position = Vector2( 507.573, 304.176 )
+scale = Vector2( 0.879485, 1 )
+color = Color( 0, 0.219608, 0.52549, 1 )
+polygon = PoolVector2Array( -448.538, -244.473, 451.11, -244.473, 451.11, 237.878, -448.538, 237.878 )
+
+[node name="Horiz_Slider" type="Node2D" parent="CanvasLayer/Pause_Menu"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Slider" type="HSlider" parent="CanvasLayer/Pause_Menu/Horiz_Slider"]
+margin_left = 321.648
+margin_top = 121.94
+margin_right = 735.648
+margin_bottom = 162.94
+min_value = 0.25
+max_value = 5.0
+step = 0.25
+value = 1.5
+tick_count = 20
+ticks_on_borders = true
+script = ExtResource( 7 )
+
+[node name="Text" type="Label" parent="CanvasLayer/Pause_Menu/Horiz_Slider"]
+margin_left = 156.482
+margin_top = 134.522
+margin_right = 292.482
+margin_bottom = 148.522
+text = "Horizontal sensitivity"
+align = 2
+
+[node name="Show" type="Label" parent="CanvasLayer/Pause_Menu/Horiz_Slider"]
+margin_left = 773.0
+margin_top = 135.0
+margin_right = 849.0
+margin_bottom = 149.0
+text = "1.5"
+
+[node name="Jump_Slider" type="Node2D" parent="CanvasLayer/Pause_Menu"]
+position = Vector2( -0.735107, 40.4302 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Slider" type="HSlider" parent="CanvasLayer/Pause_Menu/Jump_Slider"]
+margin_left = 321.648
+margin_top = 121.94
+margin_right = 735.648
+margin_bottom = 162.94
+min_value = 2.0
+max_value = 40.0
+step = 2.0
+value = 10.0
+tick_count = 20
+ticks_on_borders = true
+script = ExtResource( 8 )
+
+[node name="Text" type="Label" parent="CanvasLayer/Pause_Menu/Jump_Slider"]
+margin_left = 156.482
+margin_top = 134.522
+margin_right = 292.482
+margin_bottom = 148.522
+text = "Jump sensitivity"
+align = 2
+
+[node name="Show" type="Label" parent="CanvasLayer/Pause_Menu/Jump_Slider"]
+margin_left = 773.0
+margin_top = 135.0
+margin_right = 849.0
+margin_bottom = 149.0
+text = "10"
+
+[node name="Fast_Fall_Slider" type="Node2D" parent="CanvasLayer/Pause_Menu"]
+position = Vector2( -0.735107, 80.8605 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Slider" type="HSlider" parent="CanvasLayer/Pause_Menu/Fast_Fall_Slider"]
+margin_left = 321.648
+margin_top = 121.94
+margin_right = 735.648
+margin_bottom = 162.94
+min_value = 0.5
+max_value = 4.0
+step = 0.5
+value = 2.0
+tick_count = 8
+ticks_on_borders = true
+script = ExtResource( 9 )
+
+[node name="Text" type="Label" parent="CanvasLayer/Pause_Menu/Fast_Fall_Slider"]
+margin_left = 156.482
+margin_top = 134.522
+margin_right = 292.482
+margin_bottom = 148.522
+text = "Fast fall sensitivity"
+align = 2
+
+[node name="Show" type="Label" parent="CanvasLayer/Pause_Menu/Fast_Fall_Slider"]
+margin_left = 773.0
+margin_top = 135.0
+margin_right = 849.0
+margin_bottom = 149.0
+text = "2"
+
+[node name="Resume_Button" type="Button" parent="CanvasLayer/Pause_Menu"]
+margin_left = 444.8
+margin_top = 449.1
+margin_right = 580.8
+margin_bottom = 496.1
+action_mode = 0
+text = "Resume game"
+script = ExtResource( 10 )
+[connection signal="body_entered" from="StaticBody2D/Floor_Detector" to="StaticBody2D/Floor_Detector" method="_on_Floor_Detector_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Floor_Detector" to="StaticBody2D/Floor_Detector" method="_on_Floor_Detector_body_exited"]
+[connection signal="body_entered" from="StaticBody2D2/Floor_Detector" to="StaticBody2D2/Floor_Detector" method="_on_Floor_Detector_body_entered"]
+[connection signal="body_exited" from="StaticBody2D2/Floor_Detector" to="StaticBody2D2/Floor_Detector" method="_on_Floor_Detector_body_exited"]
+[connection signal="body_entered" from="StaticBody2D3/Floor_Detector" to="StaticBody2D3/Floor_Detector" method="_on_Floor_Detector_body_entered"]
+[connection signal="body_exited" from="StaticBody2D3/Floor_Detector" to="StaticBody2D3/Floor_Detector" method="_on_Floor_Detector_body_exited"]
+[connection signal="body_entered" from="StaticBody2D4/Floor_Detector" to="StaticBody2D4/Floor_Detector" method="_on_Floor_Detector_body_entered"]
+[connection signal="body_exited" from="StaticBody2D4/Floor_Detector" to="StaticBody2D4/Floor_Detector" method="_on_Floor_Detector_body_exited"]
+[connection signal="body_entered" from="Death_Zone" to="Death_Zone" method="_on_Death_Zone_body_entered"]
+[connection signal="value_changed" from="CanvasLayer/Pause_Menu/Horiz_Slider/Slider" to="CanvasLayer/Pause_Menu/Horiz_Slider/Slider" method="_on_Slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Pause_Menu/Jump_Slider/Slider" to="CanvasLayer/Pause_Menu/Jump_Slider/Slider" method="_on_Slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Pause_Menu/Fast_Fall_Slider/Slider" to="CanvasLayer/Pause_Menu/Fast_Fall_Slider/Slider" method="_on_Slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Pause_Menu/Resume_Button" to="CanvasLayer/Pause_Menu/Resume_Button" method="_on_Resume_Button_pressed"]
