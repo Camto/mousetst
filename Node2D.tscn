@@ -29,7 +29,7 @@ Press esc to free your mouse and pause.
 Click the window to resume."
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 477.562, 283.657 )
+position = Vector2( -3665.62, 148.401 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -48,6 +48,29 @@ script = ExtResource( 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Floor_Detector"]
 position = Vector2( -477.562, -283.657 )
 polygon = PoolVector2Array( 54.6846, 127.8, 78.9426, 206.455, 167.154, 310.103, 275.212, 393.169, 464.866, 414.486, 598.939, 366.85, 665.839, 292.425, 709.741, 210.891, 716.849, 180.727, 792.717, 180.727, 887.544, 200.575, 886.809, 224.098, 452.369, 515.194, 146.04, 383.166, 14.2995, 197.528, 5.48512, 17.368, 5.48512, 11.3806, 103.201, -60.3831, 167.889, -15.5424, 148.041, 2.83485, 28.704, 43.5113, 23.8107, 134.416 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2( 805.045, -519.237 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+position = Vector2( -333.784, 805.34 )
+polygon = PoolVector2Array( -426.562, -79.7702, -393.343, -21.5048, -324.925, 46.9139, -237.772, 105.558, -154.693, 129.179, -62.6532, 134.066, 26.9427, 122.663, 114.095, 96.5989, 169.482, 50.1719, 210.492, -1.68848, 243.699, -63.1972, 343.568, -59.7803, 408.429, -70.436, 197.346, 203.203, -82.8448, 232.525, -363.035, 143.744, -525.715, -88.8375, -538.575, -337.477, -397.966, -304.896, -437.643, -236.003, -447.101, -162.415 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D5"]
+position = Vector2( -377.892, 880.203 )
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -354.716, -378.045, -393.513, -310.804, -403.324, -237.598, -382.608, -154.731, -349.269, -96.6558, -280.081, -27.8263, -194.403, 29.89, -110.517, 53.9088, -18.7446, 58.2106, 69.4431, 48.173, 157.989, 20.9281, 213.555, -24.5997, 255.354, -78.0611, 287.429, -137.683, 386.286, -134.643, 453.463, -144.836, 241.491, 127.921, -38.4297, 156.969, -318.791, 68.9442, -481.607, -161.986, -493.611, -411.482 )
+
+[node name="Floor_Detector" type="Area2D" parent="StaticBody2D5"]
+position = Vector2( -2.20532, -19.1124 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D5/Floor_Detector"]
+position = Vector2( -26.8668, -463.031 )
+polygon = PoolVector2Array( -814.136, 1105.19, -842.43, 951.721, -844.358, 922.707, -690.445, 958.532, -704.073, 983.471, -754.726, 1060.43, -752.839, 1124.75, -711.027, 1202.65, -677.306, 1249.07, -610.187, 1313.35, -533.968, 1367.38, -456.611, 1389.57, -369.584, 1389, -284.264, 1381.03, -202.926, 1358.85, -154.597, 1317.11, -107.428, 1276.74, -60.6363, 1223.53, -47.8062, 1202.78, 43.1362, 1205.42, 121.322, 1188.79, 104.18, 1217.05, -351.784, 1494.09, -696.764, 1320.91 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2( 1131.31, 182.567 )
@@ -91,31 +114,10 @@ script = ExtResource( 1 )
 position = Vector2( -477.562, -283.657 )
 polygon = PoolVector2Array( 442.29, 291.234, 560.2, 291.234, 560.288, 263.889, 442.2, 263.854 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2( 2037.28, 117.626 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
-polygon = PoolVector2Array( -149.584, -105.376, -122.584, -77.3757, -88.5836, -52.3756, -51.5835, -32.3755, -11.5833, -22.3755, 30.417, -16.3755, 66.417, -16.3755, 58.417, 13.6246, 10.4167, 14.6246, -27.5835, 6.62462, -71.5835, -7.37544, -111.584, -28.3755, -151.584, -59.3757, -193.584, -105.376 )
-
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D4"]
-color = Color( 1, 0, 0, 1 )
-polygon = PoolVector2Array( -193.633, -105.484, -149.65, -105.484, -123.334, -77.8804, -88.3694, -52.3007, -51.5645, -32.4258, -11.6306, -22.4884, 30.5115, -16.4155, 66.5806, -16.4155, 58.6675, 13.5809, 10.2686, 14.685, -27.6411, 6.77187, -71.6234, -7.21416, -111.557, -28.1932, -152.227, -59.8458 )
-
-[node name="Floor_Detector" type="Area2D" parent="StaticBody2D4"]
-position = Vector2( -2.20532, -19.1124 )
-script = ExtResource( 1 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4/Floor_Detector"]
-position = Vector2( -477.562, -283.657 )
-polygon = PoolVector2Array( 286.118, 197.218, 286.856, 170.826, 331.006, 171.204, 330.252, 197.241, 368.729, 219.288, 408.257, 237.998, 440.143, 250.384, 472.137, 259.882, 511.005, 263.656, 546.476, 263.656, 546.854, 285.92, 426.855, 294.976 )
-
 [node name="Player" type="RigidBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( 88.3266, 74.2618 )
+position = Vector2( 66.3565, 63.9229 )
 gravity_scale = 20.0
 script = ExtResource( 2 )
 __meta__ = {
@@ -275,12 +277,12 @@ text = "Resume game"
 script = ExtResource( 10 )
 [connection signal="body_entered" from="StaticBody2D/Floor_Detector" to="StaticBody2D/Floor_Detector" method="_on_Floor_Detector_body_entered"]
 [connection signal="body_exited" from="StaticBody2D/Floor_Detector" to="StaticBody2D/Floor_Detector" method="_on_Floor_Detector_body_exited"]
+[connection signal="body_entered" from="StaticBody2D5/Floor_Detector" to="StaticBody2D5/Floor_Detector" method="_on_Floor_Detector_body_entered"]
+[connection signal="body_exited" from="StaticBody2D5/Floor_Detector" to="StaticBody2D5/Floor_Detector" method="_on_Floor_Detector_body_exited"]
 [connection signal="body_entered" from="StaticBody2D2/Floor_Detector" to="StaticBody2D2/Floor_Detector" method="_on_Floor_Detector_body_entered"]
 [connection signal="body_exited" from="StaticBody2D2/Floor_Detector" to="StaticBody2D2/Floor_Detector" method="_on_Floor_Detector_body_exited"]
 [connection signal="body_entered" from="StaticBody2D3/Floor_Detector" to="StaticBody2D3/Floor_Detector" method="_on_Floor_Detector_body_entered"]
 [connection signal="body_exited" from="StaticBody2D3/Floor_Detector" to="StaticBody2D3/Floor_Detector" method="_on_Floor_Detector_body_exited"]
-[connection signal="body_entered" from="StaticBody2D4/Floor_Detector" to="StaticBody2D4/Floor_Detector" method="_on_Floor_Detector_body_entered"]
-[connection signal="body_exited" from="StaticBody2D4/Floor_Detector" to="StaticBody2D4/Floor_Detector" method="_on_Floor_Detector_body_exited"]
 [connection signal="body_entered" from="Death_Zone" to="Death_Zone" method="_on_Death_Zone_body_entered"]
 [connection signal="value_changed" from="CanvasLayer/Pause_Menu/Horiz_Slider/Slider" to="CanvasLayer/Pause_Menu/Horiz_Slider/Slider" method="_on_Slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/Pause_Menu/Jump_Slider/Slider" to="CanvasLayer/Pause_Menu/Jump_Slider/Slider" method="_on_Slider_value_changed"]
